@@ -52,15 +52,22 @@ class Advert extends Admin
             ->setSearch(['title' => '标题']) // 设置搜索框
             ->addColumns([ // 批量添加数据列
                 ['id', 'ID'],
-                ['name', '广告名称', 'text.edit'],
-                ['typeid', '分类', 'select', $list_type],
-                ['ad_type', '类型', 'text', '', ['代码', '文字', '图片', 'flash']],
-                ['timeset', '时间限制', 'text', '', ['永不过期', '限时']],
-                ['create_time', '创建时间', 'datetime'],
-                ['update_time', '更新时间', 'datetime'],
+                ['name', '用户', 'text.edit'],
+                ['city', '期望区域'],
+                ['huxing', '期望户型'],
+                ['shi', '室'],
+                ['ting', '厅'],
+                ['wei', '卫'],
+                ['louceng', '期望楼层'],
+                ['typeid', '租售形式'],
+                ['beizhu', '备注'],
+                ['phone', '联系电话'],
+                ['areasize', '期望面积'],
+                ['price', '期望价格'],
                 ['status', '状态', 'switch'],
                 ['right_button', '操作', 'btn']
             ])
+
             ->addTopButtons('add,enable,disable,delete') // 批量添加顶部按钮
             ->addTopButton('custom', $btnType) // 添加顶部按钮
             ->addRightButtons(['edit', 'delete' => ['data-tips' => '删除后无法恢复。']]) // 批量添加右侧按钮
@@ -127,7 +134,6 @@ class Advert extends Admin
                 ['text', 'name', '客户名称'],
             ])
             ->addLinkages('city', '期望区域', '', 'cms_area_a')
-//            ->addLinkages('city1', '期望户型', '', 'cms_area_a')
             ->addCheckbox('huxing', '期望户型', '', ['0' => '不限'])
             ->addSelect('shi', '[:请选择室]', '', $list_type3)
             ->addSelect('ting', '[:请选择厅]', '', $list_type4)
@@ -141,14 +147,6 @@ class Advert extends Admin
                 ['text', 'price', '期望价格', ''],
                 ['radio', 'status', '立即启用', '', ['否', '是'], 1]
             ])
-//
-//
-//            ->setTrigger('ad_type', '0', 'code')
-//            ->setTrigger('ad_type', '1', 'title,color,size')
-//            ->setTrigger('ad_type', '2', 'src,alt')
-//            ->setTrigger('ad_type', '2,3', 'width,height')
-//            ->setTrigger('ad_type', '1,2,3', 'link')
-//            ->setTrigger('timeset', '1', 'start_time')
             ->fetch();
     }
 
@@ -166,10 +164,11 @@ class Advert extends Admin
         if ($this->request->isPost()) {
             // 表单数据
             $data = $this->request->post();
-
+            $time=date("Y-m-d h:m:s");
+            $data['add_time']=$time;
             // 验证
-            $result = $this->validate($data, 'Advert');
-            if (true !== $result) $this->error($result);
+//            $result = $this->validate($data, 'Advert');
+//            if (true !== $result) $this->error($result);
 
             if (AdvertModel::update($data)) {
                 // 记录行为
@@ -184,24 +183,40 @@ class Advert extends Admin
         array_unshift($list_type, '默认分类');
 
         $info = AdvertModel::get($id);
-        $info['ad_type'] = ['代码', '文字', '图片', 'flash'][$info['ad_type']];
+
 
         // 显示编辑页面
+
+        $list_type = ['0' => '求租', '1' => '求售'];
+        $list_type1 = ['0' => '低层', '1' => '电梯', '2' => '多层', '3' => '均可'];  /*期望楼层*/
+        $list_type2 = ['0' => '低层', '1' => '电梯', '2' => '多层', '3' => '均可'];  /*期望楼层*/
+
+
+        $list_type3 = ['0' => '1', '1' => '2', '2' => '3', '3' => '4'];  /*室*/
+        $list_type4 = ['0' => '1', '1' => '2', '2' => '3', '3' => '4'];  /*厅*/
+        $list_type5 = ['0' => '1', '1' => '2', '2' => '3', '3' => '4'];  /*卫*/
+
         return ZBuilder::make('form')
             ->setPageTips('如果出现无法添加的情况，可能由于浏览器将本页面当成了广告，请尝试关闭浏览器的广告过滤功能再试。', 'warning')
             ->addFormItems([
-                ['hidden', 'id'],
-                ['hidden', 'tagname'],
-                ['static', 'tagname', '广告位标识'],
-                ['static', 'ad_type', '广告类型'],
-                ['text', 'name', '广告位名称'],
-                ['select', 'typeid', '广告分类', '', $list_type],
-                ['radio', 'timeset', '时间限制', '', ['永不过期', '在设内时间内有效']],
-                ['daterange', 'start_time,end_time', '开始时间-结束时间'],
-                ['textarea', 'content', '广告内容'],
-                ['radio', 'status', '立即启用', '', ['否', '是']]
+                ['text', 'name', '客户名称'],
             ])
-            ->setTrigger('timeset', '1', 'start_time')
+            ->addLinkages('city', '期望区域', '', 'cms_area_a')
+            ->addCheckbox('huxing', '期望户型', '', ['0' => '不限'])
+            ->addSelect('shi', '[:请选择室]', '', $list_type3)
+            ->addSelect('ting', '[:请选择厅]', '', $list_type4)
+            ->addSelect('wei', '[:请选择卫]', '', $list_type5)
+            ->addFormItems([
+                ['hidden', 'id'],
+                ['select', 'louceng', '期望楼层', '', $list_type1, 0],
+                ['select', 'typeid', '租售形式', '', $list_type, 0],
+                ['text', 'beizhu', '备注', '<code>必填</code>'],
+                ['text', 'phone', '联系电话', ''],
+                ['text', 'areasize', '期望面积', ''],
+                ['text', 'price', '期望价格', ''],
+                ['radio', 'status', '立即启用', '', ['否', '是'], 1]
+            ])
+//            ->setTrigger('timeset', '1', 'start_time')
             ->setFormData($info)
             ->fetch();
     }

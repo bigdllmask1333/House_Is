@@ -33,7 +33,7 @@ class House extends Admin
         // 查询
         $map = $this->getMap();
         // 排序
-        $order = $this->getOrder('update_time desc');
+        $order = $this->getOrder('id desc');
         // 数据列表
         $data_list = AdvertModel::where($map)->order($order)->paginate();
 

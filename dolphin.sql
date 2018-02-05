@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50719
 File Encoding         : 65001
 
-Date: 2018-02-05 22:05:05
+Date: 2018-02-06 01:43:55
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -175,12 +175,14 @@ CREATE TABLE `zj_admin_attachment` (
   `sort` int(11) NOT NULL DEFAULT '100' COMMENT '排序',
   `status` tinyint(2) NOT NULL DEFAULT '1' COMMENT '状态',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='附件表';
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COMMENT='附件表';
 
 -- ----------------------------
 -- Records of zj_admin_attachment
 -- ----------------------------
+INSERT INTO `zj_admin_attachment` VALUES ('3', '1', 'QQ截图20180204140140.png', 'admin', 'uploads/images/20180206/bb5b49f7fcb6b0b1c9814e8b3979c5ff.png', '', '', 'image/png', 'png', '127600', 'b9f5d4c9b6c54381657c1e9fca48362a', '61dad3cd5e21cc26b796c7242d8a56f02d98edc9', 'local', '0', '1517851764', '1517851764', '100', '1');
 INSERT INTO `zj_admin_attachment` VALUES ('2', '1', 'u=3668240331,2053748794&fm=27&gp=0.jpg', 'admin', 'uploads/images/20180203/f68d05bc5246d4e4db0b3598dba48d4a.jpg', '', '', 'image/jpeg', 'jpg', '18068', '19aa2b1654a58c390326b74e13e39d81', 'ddb9753a0bcafb9f9903833b7a74e5c0df7a810a', 'local', '0', '1517660166', '1517660166', '100', '1');
+INSERT INTO `zj_admin_attachment` VALUES ('4', '1', 'QQ截图20180204140011.png', 'admin', 'uploads/images/20180206/46d507cc2afcf02d7bc7404c40ec1d70.png', '', '', 'image/png', 'png', '63181', '7801b286d99854fd3b8246aa22144527', '669ddafa7430b93d4b5e178e1360e8ee4707887e', 'local', '0', '1517851768', '1517851768', '100', '1');
 
 -- ----------------------------
 -- Table structure for zj_admin_config
@@ -216,11 +218,11 @@ CREATE TABLE `zj_admin_config` (
 -- Records of zj_admin_config
 -- ----------------------------
 INSERT INTO `zj_admin_config` VALUES ('1', 'web_site_status', '站点开关', 'base', 'switch', '1', '', '站点关闭后将不能访问，后台可正常登录', '', '', '', '', '', '2', '', '', '', '', '1475240395', '1477403914', '1', '1');
-INSERT INTO `zj_admin_config` VALUES ('2', 'web_site_title', '站点标题', 'base', 'text', '海豚PHP', '', '调用方式：<code>config(\'web_site_title\')</code>', '', '', '', '', '', '2', '', '', '', '', '1475240646', '1477710341', '2', '1');
-INSERT INTO `zj_admin_config` VALUES ('3', 'web_site_slogan', '站点标语', 'base', 'text', '海豚PHP，极简、极速、极致', '', '站点口号，调用方式：<code>config(\'web_site_slogan\')</code>', '', '', '', '', '', '2', '', '', '', '', '1475240994', '1477710357', '3', '1');
-INSERT INTO `zj_admin_config` VALUES ('4', 'web_site_logo', '站点LOGO', 'base', 'image', '2', '', '', '', '', '', '', '', '2', '', '', '', '', '1475241067', '1475241067', '4', '1');
+INSERT INTO `zj_admin_config` VALUES ('2', 'web_site_title', '站点标题', 'base', 'text', '房屋中介系统', '', '调用方式：<code>config(\'web_site_title\')</code>', '', '', '', '', '', '2', '', '', '', '', '1475240646', '1477710341', '2', '1');
+INSERT INTO `zj_admin_config` VALUES ('3', 'web_site_slogan', '站点标语', 'base', 'text', '房屋中介系统，极简、极速、极致', '', '站点口号，调用方式：<code>config(\'web_site_slogan\')</code>', '', '', '', '', '', '2', '', '', '', '', '1475240994', '1477710357', '3', '1');
+INSERT INTO `zj_admin_config` VALUES ('4', 'web_site_logo', '站点LOGO', 'base', 'image', '3', '', '', '', '', '', '', '', '2', '', '', '', '', '1475241067', '1475241067', '4', '1');
 INSERT INTO `zj_admin_config` VALUES ('5', 'web_site_description', '站点描述', 'base', 'textarea', '', '', '网站描述，有利于搜索引擎抓取相关信息', '', '', '', '', '', '2', '', '', '', '', '1475241186', '1475241186', '6', '1');
-INSERT INTO `zj_admin_config` VALUES ('6', 'web_site_keywords', '站点关键词', 'base', 'text', '海豚PHP、PHP开发框架、后台框架', '', '网站搜索引擎关键字', '', '', '', '', '', '2', '', '', '', '', '1475241328', '1475241328', '7', '1');
+INSERT INTO `zj_admin_config` VALUES ('6', 'web_site_keywords', '站点关键词', 'base', 'text', '房屋中介系统、PHP开发框架、后台框架', '', '网站搜索引擎关键字', '', '', '', '', '', '2', '', '', '', '', '1475241328', '1475241328', '7', '1');
 INSERT INTO `zj_admin_config` VALUES ('7', 'web_site_copyright', '版权信息', 'base', 'text', 'Copyright © 2015-2017 DolphinPHP All rights reserved.', '', '调用方式：<code>config(\'web_site_copyright\')</code>', '', '', '', '', '', '2', '', '', '', '', '1475241416', '1477710383', '8', '1');
 INSERT INTO `zj_admin_config` VALUES ('8', 'web_site_icp', '备案信息', 'base', 'text', '', '', '调用方式：<code>config(\'web_site_icp\')</code>', '', '', '', '', '', '2', '', '', '', '', '1475241441', '1477710441', '9', '1');
 INSERT INTO `zj_admin_config` VALUES ('9', 'web_site_statistics', '站点统计', 'base', 'textarea', '', '', '网站统计代码，支持百度、Google、cnzz等，调用方式：<code>config(\'web_site_statistics\')</code>', '', '', '', '', '', '2', '', '', '', '', '1475241498', '1477710455', '10', '1');
@@ -239,7 +241,7 @@ INSERT INTO `zj_admin_config` VALUES ('22', 'data_backup_part_size', '数据库�
 INSERT INTO `zj_admin_config` VALUES ('23', 'data_backup_compress', '数据库备份文件是否启用压缩', 'database', 'radio', '1', '0:否\r\n1:是', '压缩备份文件需要PHP环境支持 <code>gzopen</code>, <code>gzwrite</code>函数', '', '', '', '', '', '2', '', '', '', '', '1477017978', '1477018172', '100', '1');
 INSERT INTO `zj_admin_config` VALUES ('24', 'data_backup_compress_level', '数据库备份文件压缩级别', 'database', 'radio', '9', '1:最低\r\n4:一般\r\n9:最高', '数据库备份文件的压缩级别，该配置在开启压缩时生效', '', '', '', '', '', '2', '', '', '', '', '1477018083', '1477018083', '100', '1');
 INSERT INTO `zj_admin_config` VALUES ('25', 'top_menu_max', '顶部导航模块数量', 'system', 'text', '10', '', '设置顶部导航默认显示的模块数量', '', '', '', '', '', '2', '', '', '', '', '1477579289', '1477579289', '103', '1');
-INSERT INTO `zj_admin_config` VALUES ('26', 'web_site_logo_text', '站点LOGO文字', 'base', 'image', '', '', '', '', '', '', '', '', '2', '', '', '', '', '1477620643', '1477620643', '5', '1');
+INSERT INTO `zj_admin_config` VALUES ('26', 'web_site_logo_text', '站点LOGO文字', 'base', 'image', '4', '', '', '', '', '', '', '', '2', '', '', '', '', '1477620643', '1477620643', '5', '1');
 INSERT INTO `zj_admin_config` VALUES ('27', 'upload_image_thumb', '缩略图尺寸', 'upload', 'text', '', '', '不填写则不生成缩略图，如需生成 <code>300x300</code> 的缩略图，则填写 <code>300,300</code> ，请注意，逗号必须是英文逗号', '', '', '', '', '', '2', '', '', '', '', '1477644150', '1477649513', '100', '1');
 INSERT INTO `zj_admin_config` VALUES ('28', 'upload_image_thumb_type', '缩略图裁剪类型', 'upload', 'radio', '1', '1:等比例缩放\r\n2:缩放后填充\r\n3:居中裁剪\r\n4:左上角裁剪\r\n5:右下角裁剪\r\n6:固定尺寸缩放', '该项配置只有在启用生成缩略图时才生效', '', '', '', '', '', '2', '', '', '', '', '1477646271', '1477649521', '100', '1');
 INSERT INTO `zj_admin_config` VALUES ('29', 'upload_thumb_water', '添加水印', 'upload', 'switch', '0', '', '', '', '', '', '', '', '2', '', '', '', '', '1477649648', '1477649648', '100', '1');
@@ -329,7 +331,7 @@ CREATE TABLE `zj_admin_log` (
   KEY `action_ip_ix` (`action_ip`),
   KEY `action_id_ix` (`action_id`),
   KEY `user_id_ix` (`user_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=35 DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='行为日志表';
+) ENGINE=MyISAM AUTO_INCREMENT=49 DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='行为日志表';
 
 -- ----------------------------
 -- Records of zj_admin_log
@@ -368,6 +370,20 @@ INSERT INTO `zj_admin_log` VALUES ('31', '31', '1', '2130706433', 'admin_menu', 
 INSERT INTO `zj_admin_log` VALUES ('32', '31', '1', '2130706433', 'admin_menu', '401', '超级管理员 编辑了节点：节点ID(401)', '1', '1517758252');
 INSERT INTO `zj_admin_log` VALUES ('33', '31', '1', '2130706433', 'admin_menu', '330', '超级管理员 编辑了节点：节点ID(330)', '1', '1517760247');
 INSERT INTO `zj_admin_log` VALUES ('34', '31', '1', '2130706433', 'admin_menu', '401', '超级管理员 编辑了节点：节点ID(401)', '1', '1517760263');
+INSERT INTO `zj_admin_log` VALUES ('35', '144', '1', '2130706433', 'cms_advert', '1', '超级管理员 添加了广告：吴伟祥', '1', '1517844662');
+INSERT INTO `zj_admin_log` VALUES ('36', '144', '1', '2130706433', 'cms_advert', '2', '超级管理员 添加了广告：吴伟祥', '1', '1517844781');
+INSERT INTO `zj_admin_log` VALUES ('37', '143', '1', '2130706433', 'cms_advert', '2', '超级管理员 编辑了广告：字段(status)，原值(1)，新值：(false)', '1', '1517845130');
+INSERT INTO `zj_admin_log` VALUES ('38', '143', '1', '2130706433', 'cms_advert', '2', '超级管理员 编辑了广告：字段(status)，原值(0)，新值：(true)', '1', '1517845132');
+INSERT INTO `zj_admin_log` VALUES ('39', '142', '1', '2130706433', 'cms_advert', '0', '超级管理员 删除了广告：吴伟祥', '1', '1517845146');
+INSERT INTO `zj_admin_log` VALUES ('40', '141', '1', '2130706433', 'cms_advert', '0', '超级管理员 启用了广告：吴伟祥', '1', '1517845910');
+INSERT INTO `zj_admin_log` VALUES ('41', '140', '1', '2130706433', 'cms_advert', '0', '超级管理员 禁用了广告：吴伟祥', '1', '1517845915');
+INSERT INTO `zj_admin_log` VALUES ('42', '141', '1', '2130706433', 'cms_advert', '0', '超级管理员 启用了广告：吴伟祥', '1', '1517845922');
+INSERT INTO `zj_admin_log` VALUES ('43', '143', '1', '2130706433', 'cms_advert', '1', '超级管理员 编辑了广告：吴伟祥', '1', '1517847708');
+INSERT INTO `zj_admin_log` VALUES ('44', '143', '1', '2130706433', 'cms_advert', '1', '超级管理员 编辑了广告：吴伟祥', '1', '1517847750');
+INSERT INTO `zj_admin_log` VALUES ('45', '143', '1', '2130706433', 'cms_advert', '1', '超级管理员 编辑了广告：吴伟祥', '1', '1517847936');
+INSERT INTO `zj_admin_log` VALUES ('46', '31', '1', '2130706433', 'admin_menu', '401', '超级管理员 编辑了节点：节点ID(401)', '1', '1517848090');
+INSERT INTO `zj_admin_log` VALUES ('47', '31', '1', '2130706433', 'admin_menu', '330', '超级管理员 编辑了节点：节点ID(330)', '1', '1517848111');
+INSERT INTO `zj_admin_log` VALUES ('48', '42', '1', '2130706433', 'admin_config', '0', '超级管理员 更新了系统设置：分组(base)', '1', '1517851791');
 
 -- ----------------------------
 -- Table structure for zj_admin_menu
@@ -537,7 +553,7 @@ INSERT INTO `zj_admin_menu` VALUES ('334', '330', 'cms', '启用', '', 'module_a
 INSERT INTO `zj_admin_menu` VALUES ('333', '330', 'cms', '删除', '', 'module_admin', 'cms/advert/delete', '_self', '0', '1517733760', '1517733760', '100', '0', '1', '');
 INSERT INTO `zj_admin_menu` VALUES ('332', '330', 'cms', '编辑', '', 'module_admin', 'cms/advert/edit', '_self', '0', '1517733760', '1517733760', '100', '0', '1', '');
 INSERT INTO `zj_admin_menu` VALUES ('331', '330', 'cms', '新增', '', 'module_admin', 'cms/advert/add', '_self', '0', '1517733760', '1517733760', '100', '0', '1', '');
-INSERT INTO `zj_admin_menu` VALUES ('330', '328', 'cms', '客户登记列表', 'fa fa-fw fa-handshake-o', 'module_admin', 'cms/advert/index', '_self', '0', '1517733760', '1517760247', '100', '0', '1', '');
+INSERT INTO `zj_admin_menu` VALUES ('330', '328', 'cms', '客户登记列表（开发中）', 'fa fa-fw fa-handshake-o', 'module_admin', 'cms/advert/index', '_self', '0', '1517733760', '1517848111', '100', '0', '1', '');
 INSERT INTO `zj_admin_menu` VALUES ('329', '308', 'cms', '营销管理', 'fa fa-fw fa-money', 'module_admin', '', '_self', '0', '1517733760', '1517736994', '100', '0', '1', '');
 INSERT INTO `zj_admin_menu` VALUES ('328', '308', 'cms', '内容管理', 'fa fa-fw fa-th-list', 'module_admin', '', '_self', '0', '1517733760', '1517733760', '100', '0', '1', '');
 INSERT INTO `zj_admin_menu` VALUES ('327', '325', 'cms', '还原', '', 'module_admin', 'cms/recycle/restore', '_self', '0', '1517733760', '1517733760', '100', '0', '1', '');
@@ -581,7 +597,7 @@ INSERT INTO `zj_admin_menu` VALUES ('397', '394', 'cms', '删除', '', 'module_a
 INSERT INTO `zj_admin_menu` VALUES ('398', '394', 'cms', '启用', '', 'module_admin', 'cms/menu/enable', '_self', '0', '1517733761', '1517733761', '100', '0', '1', '');
 INSERT INTO `zj_admin_menu` VALUES ('399', '394', 'cms', '禁用', '', 'module_admin', 'cms/menu/disable', '_self', '0', '1517733761', '1517733761', '100', '0', '1', '');
 INSERT INTO `zj_admin_menu` VALUES ('400', '394', 'cms', '快速编辑', '', 'module_admin', 'cms/menu/quickedit', '_self', '0', '1517733761', '1517733761', '100', '0', '1', '');
-INSERT INTO `zj_admin_menu` VALUES ('401', '328', 'cms', '房源信息列表', 'fa fa-fw fa-user-circle', 'module_admin', 'cms/house/index', '_self', '0', '1517736924', '1517760263', '100', '0', '1', '');
+INSERT INTO `zj_admin_menu` VALUES ('401', '328', 'cms', '房源信息列表（待开发）', 'fa fa-fw fa-user-circle', 'module_admin', 'cms/house/index', '_self', '0', '1517736924', '1517848090', '100', '0', '1', '');
 
 -- ----------------------------
 -- Table structure for zj_admin_module
@@ -724,7 +740,7 @@ CREATE TABLE `zj_admin_user` (
 -- ----------------------------
 -- Records of zj_admin_user
 -- ----------------------------
-INSERT INTO `zj_admin_user` VALUES ('1', 'admin', '超级管理员', '$2y$10$Brw6wmuSLIIx3Yabid8/Wu5l8VQ9M/H/CG3C9RqN9dUCwZW3ljGOK', '', '0', '', '0', '0', '0.00', '0', '1', '0', '0', '1476065410', '1517735104', '1517735103', '2130706433', '100', '1', null, '', null, null);
+INSERT INTO `zj_admin_user` VALUES ('1', 'admin', '超级管理员', '$2y$10$Brw6wmuSLIIx3Yabid8/Wu5l8VQ9M/H/CG3C9RqN9dUCwZW3ljGOK', '', '0', '', '0', '0', '0.00', '0', '1', '0', '0', '1476065410', '1517851750', '1517851750', '2130706433', '100', '1', null, '', null, null);
 INSERT INTO `zj_admin_user` VALUES ('2', 'xiaowu', '吴伟祥', '$2y$10$Okn9s.p0D91489Uc6d7fKOwiBOF.WY.MLnLaLLAmwcg4M7wbVaSkm', '111@qq.com', '0', '18712377078', '0', '0', '0.00', '0', '2', '0', '0', '1517668089', '1517668341', '1517668340', '2130706433', '100', '1', '0', '', null, null);
 INSERT INTO `zj_admin_user` VALUES ('4', 'test123', 'wuweixiang', '$2y$10$d2Qx2IlvZWD6KOZ5E.TH7..QkB6u/3jJGsOwQDeKlGX947SjON6Ga', '', '0', '18712377777', '0', '0', '0.00', '0', '2', '0', '0', '1517668797', '1517668797', '0', '0', '100', '1', '0', '研发部', 'PHP程序员', '0551-7496237');
 INSERT INTO `zj_admin_user` VALUES ('5', 'dnasd', '阿萨达', '$2y$10$986OG1Z1J0DluQuTdRb5uu5n9Ml7g6/jEODeVfyjNN/hGqtLIC7W.', '', '0', '18712377771', '0', '0', '0.00', '0', '2', '0', '0', '1517668873', '1517669274', '0', '0', '100', '1', '1', 'asdad1', 'asdasd', 'asdsad');
@@ -734,25 +750,53 @@ INSERT INTO `zj_admin_user` VALUES ('5', 'dnasd', '阿萨达', '$2y$10$986OG1Z1J
 -- ----------------------------
 DROP TABLE IF EXISTS `zj_cms_advert`;
 CREATE TABLE `zj_cms_advert` (
-  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `typeid` int(11) unsigned NOT NULL DEFAULT '0' COMMENT '分类id',
-  `tagname` varchar(30) NOT NULL DEFAULT '' COMMENT '广告位标识',
-  `ad_type` tinyint(2) unsigned NOT NULL DEFAULT '0' COMMENT '广告类型',
-  `timeset` tinyint(2) unsigned NOT NULL DEFAULT '0' COMMENT '时间限制:0-永不过期,1-在设内时间内有效',
-  `start_time` int(11) unsigned NOT NULL DEFAULT '0' COMMENT '开始时间',
-  `end_time` int(11) unsigned NOT NULL DEFAULT '0' COMMENT '结束时间',
-  `name` varchar(60) NOT NULL DEFAULT '' COMMENT '广告位名称',
-  `content` text NOT NULL COMMENT '广告内容',
-  `expcontent` text NOT NULL COMMENT '过期显示内容',
-  `create_time` int(11) unsigned NOT NULL DEFAULT '0' COMMENT '创建时间',
-  `update_time` int(11) unsigned NOT NULL DEFAULT '0' COMMENT '更新时间',
-  `status` tinyint(2) unsigned NOT NULL DEFAULT '0' COMMENT '状态',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL,
+  `city` varchar(255) DEFAULT NULL,
+  `shi` int(2) DEFAULT NULL,
+  `wei` int(2) DEFAULT NULL,
+  `ting` int(2) DEFAULT NULL,
+  `add_time` varchar(100) DEFAULT NULL,
+  `louceng` int(2) DEFAULT NULL,
+  `typeid` int(2) DEFAULT NULL,
+  `beizhu` varchar(255) DEFAULT NULL,
+  `phone` varchar(255) DEFAULT NULL,
+  `areasize` float(10,2) DEFAULT NULL,
+  `price` float(10,2) DEFAULT NULL,
+  `status` tinyint(2) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='广告表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of zj_cms_advert
 -- ----------------------------
+
+-- ----------------------------
+-- Table structure for zj_cms_advert123
+-- ----------------------------
+DROP TABLE IF EXISTS `zj_cms_advert123`;
+CREATE TABLE `zj_cms_advert123` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(30) DEFAULT '' COMMENT '用户名',
+  `city` varchar(30) DEFAULT NULL COMMENT '小区',
+  `shi` int(2) DEFAULT NULL COMMENT '室',
+  `wei` int(2) DEFAULT NULL,
+  `ting` int(2) DEFAULT NULL COMMENT '厅',
+  `add_time` datetime(6) DEFAULT NULL COMMENT '开始时间',
+  `louceng` int(3) DEFAULT NULL COMMENT '期望楼层',
+  `typeid` int(10) DEFAULT NULL COMMENT '租售形式',
+  `beizhu` text COMMENT '备注',
+  `phone` varchar(20) DEFAULT NULL COMMENT '手机号',
+  `areasize` float(11,0) DEFAULT NULL COMMENT '期望面积',
+  `price` float(11,0) DEFAULT NULL COMMENT '更新时间',
+  `status` tinyint(2) DEFAULT '0' COMMENT '状态',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='广告表';
+
+-- ----------------------------
+-- Records of zj_cms_advert123
+-- ----------------------------
+INSERT INTO `zj_cms_advert123` VALUES ('1', '吴伟祥', '10', '2', '1', '1', '2018-02-06 12:02:36.000000', '2', '1', '测试', '18712377078', '100', '14000', '1');
 
 -- ----------------------------
 -- Table structure for zj_cms_advert_type
