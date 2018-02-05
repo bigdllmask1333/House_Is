@@ -33,13 +33,13 @@ class Advert extends Admin
         // 查询
         $map = $this->getMap();
         // 排序
-        $order = $this->getOrder('update_time desc');
+        $order = $this->getOrder('id desc');
         // 数据列表
         $data_list = AdvertModel::where($map)->order($order)->paginate();
 
         $btnType = [
             'class' => 'btn btn-info',
-            'title' => '广告分类',
+            'title' => '客户列表',
             'icon'  => 'fa fa-fw fa-sitemap',
             'href'  => url('advert_type/index')
         ];
@@ -82,62 +82,25 @@ class Advert extends Admin
             // 表单数据
             $data = $this->request->post();
 
+            error_log("验证数据".var_export($data,true));
+
             // 验证
-            $result = $this->validate($data, 'Advert');
-            if (true !== $result) $this->error($result);
-            if ($data['ad_type'] != 0) {
-                $data['link'] == '' && $this->error('链接不能为空');
-                Validate::is($data['link'], 'url') === false && $this->error('链接不是有效的url地址'); // true
-            }
+//            $result = $this->validate($data, 'Advert');
+//            if (true !== $result) $this->error($result);
+//            if ($data['ad_type'] != 0) {
+//                $data['link'] == '' && $this->error('链接不能为空');
+//                Validate::is($data['link'], 'url') === false && $this->error('链接不是有效的url地址'); // true
+//            }
 
             // 广告类型
-            switch ($data['ad_type']) {
-                case 0: // 代码
-                    $data['content'] = $data['code'];
-                    break;
-                case 1: // 文字
-                    $data['content'] = '<a href="'.$data['link'].'" target="_blank" style="';
-                    if ($data['size'] != '') {
-                        $data['content'] .= 'font-size:'.$data['size'].'px;';
-                    }
-                    if ($data['color'] != '') {
-                        $data['content'] .= 'color:'.$data['color'];
-                    }
-                    $data['content'] .= '">'.$data['title'].'</a>';
-                    break;
-                case 2: // 图片
-                    $data['content'] = '<a href="'.$data['link'].'" target="_blank"><img src="'.get_file_path($data['src']).'" style="';
-                    if ($data['width'] != '') {
-                        $data['content'] .= 'width:'.$data['width'].'px;';
-                    }
-                    if ($data['height'] != '') {
-                        $data['content'] .= 'height:'.$data['height'].'px;';
-                    }
-                    if ($data['alt'] != '') {
-                        $data['content'] .= '" alt="'.$data['alt'];
-                    }
-                    $data['content'] .= '" /></a>';
-                    break;
-                case 3: // flash
-                    $data['content'] = '';
-                    $data['content'] = '<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"';
-                    if ($data['width'] != '') {
-                        $data['content'] .= ' width="'.$data['width'].'"';
-                    }
-                    if ($data['height'] != '') {
-                        $data['content'] .= ' height="'.$data['height'].'"';
-                    }
-                    $data['content'] .= '><param name="quality" value="high" /><param name="movie" value="'.$data['link'].'" /><embed allowfullscreen="true"';
-                    if ($data['height'] != '') {
-                        $data['content'] .= ' height="'.$data['height'].'"';
-                    }
-                    $data['content'] .= ' pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="'.$data['link'].'" type="application/x-shockwave-flash"';
-                    if ($data['width'] != '') {
-                        $data['content'] .= ' width="'.$data['width'].'"';
-                    }
-                    $data['content'] .= '></embed></object>';
-                    break;
+            if (!empty($data['huxing'][0])){
+                $data['shi']='9';
+                $data['ting']='9';
+                $data['wei']='9';
+            }else{
+                unset($data['huxing']);
             }
+
 
             if ($advert = AdvertModel::create($data)) {
                 // 记录行为
@@ -152,8 +115,11 @@ class Advert extends Admin
         $list_type = ['0' => '求租', '1' => '求售'];
         $list_type1 = ['0' => '低层', '1' => '电梯', '2' => '多层', '3' => '均可'];  /*期望楼层*/
         $list_type2 = ['0' => '低层', '1' => '电梯', '2' => '多层', '3' => '均可'];  /*期望楼层*/
-//        array_unshift($list_type, '默认分类');
 
+
+        $list_type3 = ['0' => '1', '1' => '2', '2' => '3', '3' => '4'];  /*室*/
+        $list_type4 = ['0' => '1', '1' => '2', '2' => '3', '3' => '4'];  /*厅*/
+        $list_type5 = ['0' => '1', '1' => '2', '2' => '3', '3' => '4'];  /*卫*/
         // 显示添加页面
         return ZBuilder::make('form')
             ->setPageTips('如果出现无法添加的情况，可能由于浏览器将本页面当成了广告，请尝试关闭浏览器的广告过滤功能再试。', 'warning')
@@ -161,39 +127,28 @@ class Advert extends Admin
                 ['text', 'name', '客户名称'],
             ])
             ->addLinkages('city', '期望区域', '', 'cms_area_a')
-            ->addLinkages('city1', '期望户型', '', 'cms_area_a')
-
+//            ->addLinkages('city1', '期望户型', '', 'cms_area_a')
+            ->addCheckbox('huxing', '期望户型', '', ['0' => '不限'])
+            ->addSelect('shi', '[:请选择室]', '', $list_type3)
+            ->addSelect('ting', '[:请选择厅]', '', $list_type4)
+            ->addSelect('wei', '[:请选择卫]', '', $list_type5)
             ->addFormItems([
-                ['select', 'louceng1', '期望户型', '', $list_type2, 0],
                 ['select', 'louceng', '期望楼层', '', $list_type1, 0],
                 ['select', 'typeid', '租售形式', '', $list_type, 0],
                 ['text', 'beizhu', '备注', '<code>必填</code>'],
                 ['text', 'phone', '联系电话', ''],
                 ['text', 'areasize', '期望面积', ''],
                 ['text', 'price', '期望价格', ''],
-//                ['text', 'tagname', '广告位标识', '由小写字母、数字或下划线组成，不能以数字开头'],
-//                ['radio', 'timeset', '时间限制', '', ['永不过期', '在设内时间内有效'], 0],
-//                ['daterange', 'start_time,end_time', '开始时间-结束时间'],
-//                ['radio', 'ad_type', '广告类型', '', ['代码', '文字', '图片', 'flash'], 0],
-//                ['textarea', 'code', '代码', '<code>必填</code>，支持html代码'],
-//                ['image', 'src', '图片', '<code>必须</code>'],
-//                ['text', 'title', '文字内容', '<code>必填</code>'],
-//                ['text', 'link', '链接', '<code>必填</code>'],
-//                ['colorpicker', 'color', '文字颜色', '', '', 'rgb'],
-//                ['text', 'size', '文字大小', '只需填写数字，例如:12，表示12px', '',  ['', 'px']],
-//                ['text', 'width', '宽度', '不用填写单位，只需填写具体数字'],
-//                ['text', 'height', '高度', '不用填写单位，只需填写具体数字'],
-//                ['text', 'alt', '图片描述', '即图片alt的值'],
                 ['radio', 'status', '立即启用', '', ['否', '是'], 1]
             ])
-
-
-            ->setTrigger('ad_type', '0', 'code')
-            ->setTrigger('ad_type', '1', 'title,color,size')
-            ->setTrigger('ad_type', '2', 'src,alt')
-            ->setTrigger('ad_type', '2,3', 'width,height')
-            ->setTrigger('ad_type', '1,2,3', 'link')
-            ->setTrigger('timeset', '1', 'start_time')
+//
+//
+//            ->setTrigger('ad_type', '0', 'code')
+//            ->setTrigger('ad_type', '1', 'title,color,size')
+//            ->setTrigger('ad_type', '2', 'src,alt')
+//            ->setTrigger('ad_type', '2,3', 'width,height')
+//            ->setTrigger('ad_type', '1,2,3', 'link')
+//            ->setTrigger('timeset', '1', 'start_time')
             ->fetch();
     }
 
