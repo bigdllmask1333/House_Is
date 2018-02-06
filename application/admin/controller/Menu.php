@@ -1,10 +1,10 @@
 <?php
 // +----------------------------------------------------------------------
-// | 房屋中介系统 [ DolphinPHP ]
+// | 房屋中介系统 [   ]
 // +----------------------------------------------------------------------
-// | 版权所有 2016~2017 XXX限公司 [ http://www.zrthink.com ]
+// | 版权所有 2016~2017 XXX限公司 [    ]
 // +----------------------------------------------------------------------
-// | 官方网站: http://dolphinphp.com
+// | 官方网站: http:// .com
 // +----------------------------------------------------------------------
 // | 开源协议 ( http://www.apache.org/licenses/LICENSE-2.0 )
 // +----------------------------------------------------------------------
@@ -136,7 +136,7 @@ class Menu extends Admin
                 'text',
                 'url_value',
                 '节点链接',
-                "可留空，如果是模块链接，请填写<code>模块/控制器/操作</code>，如：<code>admin/menu/add</code>。如果是普通链接，则直接填写url地址，如：<code>http://www.dolphinphp.com</code>"
+                "可留空，如果是模块链接，请填写<code>模块/控制器/操作</code>，如：<code>admin/menu/add</code>。如果是普通链接，则直接填写url地址，如：<code>http://www. .com</code>"
             )
             ->addText('params', '参数', '如：a=1&b=2')
             ->addSelect('role', '角色', '除超级管理员外，拥有该节点权限的角色', RoleModel::where('id', 'neq', 1)->column('id,name'), '', 'multiple')
@@ -212,7 +212,7 @@ class Menu extends Admin
                 'text',
                 'url_value',
                 '节点链接',
-                "可留空，如果是模块链接，请填写<code>模块/控制器/操作</code>，如：<code>admin/menu/add</code>。如果是普通链接，则直接填写url地址，如：<code>http://www.dolphinphp.com</code>"
+                "可留空，如果是模块链接，请填写<code>模块/控制器/操作</code>，如：<code>admin/menu/add</code>。如果是普通链接，则直接填写url地址，如：<code>http://www. .com</code>"
             )
             ->addText('params', '参数', '如：a=1&b=2')
             ->addSelect('role', '角色', '除超级管理员外，拥有该节点权限的角色', RoleModel::where('id', 'neq', 1)->column('id,name'), '', 'multiple')
