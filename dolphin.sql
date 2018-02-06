@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50719
 File Encoding         : 65001
 
-Date: 2018-02-06 14:07:56
+Date: 2018-02-06 18:31:23
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -331,7 +331,7 @@ CREATE TABLE `zj_admin_log` (
   KEY `action_ip_ix` (`action_ip`),
   KEY `action_id_ix` (`action_id`),
   KEY `user_id_ix` (`user_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=58 DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='行为日志表';
+) ENGINE=MyISAM AUTO_INCREMENT=59 DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='行为日志表';
 
 -- ----------------------------
 -- Records of zj_admin_log
@@ -393,6 +393,7 @@ INSERT INTO `zj_admin_log` VALUES ('54', '30', '1', '2130706433', 'admin_menu', 
 INSERT INTO `zj_admin_log` VALUES ('55', '30', '1', '2130706433', 'admin_menu', '405', '超级管理员 添加了节点：所属模块(cms),所属节点ID(401),节点标题(启用),节点链接(cms/house/enable)', '1', '1517897060');
 INSERT INTO `zj_admin_log` VALUES ('56', '30', '1', '2130706433', 'admin_menu', '406', '超级管理员 添加了节点：所属模块(cms),所属节点ID(401),节点标题(禁用),节点链接(cms/house/disable)', '1', '1517897089');
 INSERT INTO `zj_admin_log` VALUES ('57', '30', '1', '2130706433', 'admin_menu', '407', '超级管理员 添加了节点：所属模块(cms),所属节点ID(401),节点标题(快速编辑),节点链接(cms/house/quickedit)', '1', '1517897114');
+INSERT INTO `zj_admin_log` VALUES ('58', '144', '1', '2130706433', 'cms_advert', '1', '超级管理员 添加了广告：吴伟祥', '1', '1517899156');
 
 -- ----------------------------
 -- Table structure for zj_admin_menu
@@ -780,11 +781,12 @@ CREATE TABLE `zj_cms_advert` (
   `price` float(10,2) DEFAULT NULL,
   `status` tinyint(2) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of zj_cms_advert
 -- ----------------------------
+INSERT INTO `zj_cms_advert` VALUES ('1', '吴伟祥', '7', '3', '1', '2', null, '0', '0', '开发中', '17318511237', '100.00', '13500.00', '1');
 
 -- ----------------------------
 -- Table structure for zj_cms_advert123
