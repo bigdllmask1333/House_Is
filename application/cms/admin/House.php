@@ -13,7 +13,7 @@ namespace app\cms\admin;
 
 use app\admin\controller\Admin;
 use app\common\builder\ZBuilder;
-use app\cms\model\Advert as AdvertModel;
+use app\cms\model\House as HouseModel;
 use app\cms\model\AdvertType as AdvertTypeModel;
 use think\Validate;
 
@@ -35,7 +35,7 @@ class House extends Admin
         // 排序
         $order = $this->getOrder('id desc');
         // 数据列表
-        $data_list = AdvertModel::where($map)->order($order)->paginate();
+        $data_list = HouseModel::where($map)->order($order)->paginate();
 
         $btnType = [
             'class' => 'btn btn-info',

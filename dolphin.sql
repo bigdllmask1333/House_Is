@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : locaohost
+Source Server         : 本地
 Source Server Version : 50719
-Source Host           : 127.0.0.1:3306
+Source Host           : localhost:3306
 Source Database       : dolphin
 
 Target Server Type    : MYSQL
 Target Server Version : 50719
 File Encoding         : 65001
 
-Date: 2018-02-06 18:31:23
+Date: 2018-02-07 00:23:30
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -175,7 +175,7 @@ CREATE TABLE `zj_admin_attachment` (
   `sort` int(11) NOT NULL DEFAULT '100' COMMENT '排序',
   `status` tinyint(2) NOT NULL DEFAULT '1' COMMENT '状态',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COMMENT='附件表';
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COMMENT='附件表';
 
 -- ----------------------------
 -- Records of zj_admin_attachment
@@ -183,6 +183,10 @@ CREATE TABLE `zj_admin_attachment` (
 INSERT INTO `zj_admin_attachment` VALUES ('3', '1', 'QQ截图20180204140140.png', 'admin', 'uploads/images/20180206/bb5b49f7fcb6b0b1c9814e8b3979c5ff.png', '', '', 'image/png', 'png', '127600', 'b9f5d4c9b6c54381657c1e9fca48362a', '61dad3cd5e21cc26b796c7242d8a56f02d98edc9', 'local', '0', '1517851764', '1517851764', '100', '1');
 INSERT INTO `zj_admin_attachment` VALUES ('2', '1', 'u=3668240331,2053748794&fm=27&gp=0.jpg', 'admin', 'uploads/images/20180203/f68d05bc5246d4e4db0b3598dba48d4a.jpg', '', '', 'image/jpeg', 'jpg', '18068', '19aa2b1654a58c390326b74e13e39d81', 'ddb9753a0bcafb9f9903833b7a74e5c0df7a810a', 'local', '0', '1517660166', '1517660166', '100', '1');
 INSERT INTO `zj_admin_attachment` VALUES ('4', '1', 'QQ截图20180204140011.png', 'admin', 'uploads/images/20180206/46d507cc2afcf02d7bc7404c40ec1d70.png', '', '', 'image/png', 'png', '63181', '7801b286d99854fd3b8246aa22144527', '669ddafa7430b93d4b5e178e1360e8ee4707887e', 'local', '0', '1517851768', '1517851768', '100', '1');
+INSERT INTO `zj_admin_attachment` VALUES ('5', '1', 'QQ截图20180206220611.png', 'admin', 'uploads/images/20180206/38eeec66b1f5f523b419c9c28f96e20b.png', '', '', 'image/png', 'png', '39787', '2a39a214a8c401ed85f6007db4af900d', '35450864a9459bcead36dbf11ccc3a47acb6cf40', 'local', '0', '1517926005', '1517926005', '100', '1');
+INSERT INTO `zj_admin_attachment` VALUES ('6', '1', 'timg.gif', 'admin', 'uploads/images/20180206/86890d8312c2b00063a951fddf4e8a16.gif', '', '', 'image/gif', 'gif', '52', 'b5b65854c341d8899720b0cc199860e2', '85c0eaf20787bb75de971e34b1ce1b5d914f7b7a', 'local', '0', '1517926537', '1517926537', '100', '1');
+INSERT INTO `zj_admin_attachment` VALUES ('7', '1', 'QQ截图20180206221650.png', 'admin', 'uploads/images/20180206/4fbbb6b9c1a2927ab0ba84484113e519.png', '', '', 'image/png', 'png', '69474', '226bda2160719f878804536680fe5396', 'd3c6ac67228fef83f839624b29c84c9f219cd06b', 'local', '0', '1517926619', '1517926619', '100', '1');
+INSERT INTO `zj_admin_attachment` VALUES ('8', '1', '未标题-1.gif', 'admin', 'uploads/images/20180206/4be324c47ab644fa4527e72c6ce3825c.gif', '', '', 'image/gif', 'gif', '15662', '207ace18df2f2f1d4171a0c4d3fb0f47', 'e62f6419173a872885ab6087774ca05fba803fcb', 'local', '0', '1517926754', '1517926754', '100', '1');
 
 -- ----------------------------
 -- Table structure for zj_admin_config
@@ -220,7 +224,7 @@ CREATE TABLE `zj_admin_config` (
 INSERT INTO `zj_admin_config` VALUES ('1', 'web_site_status', '站点开关', 'base', 'switch', '1', '', '站点关闭后将不能访问，后台可正常登录', '', '', '', '', '', '2', '', '', '', '', '1475240395', '1477403914', '1', '1');
 INSERT INTO `zj_admin_config` VALUES ('2', 'web_site_title', '站点标题', 'base', 'text', '房屋中介系统', '', '调用方式：<code>config(\'web_site_title\')</code>', '', '', '', '', '', '2', '', '', '', '', '1475240646', '1477710341', '2', '1');
 INSERT INTO `zj_admin_config` VALUES ('3', 'web_site_slogan', '站点标语', 'base', 'text', '房屋中介系统，极简、极速、极致', '', '站点口号，调用方式：<code>config(\'web_site_slogan\')</code>', '', '', '', '', '', '2', '', '', '', '', '1475240994', '1477710357', '3', '1');
-INSERT INTO `zj_admin_config` VALUES ('4', 'web_site_logo', '站点LOGO', 'base', 'image', '3', '', '', '', '', '', '', '', '2', '', '', '', '', '1475241067', '1475241067', '4', '1');
+INSERT INTO `zj_admin_config` VALUES ('4', 'web_site_logo', '站点LOGO', 'base', 'image', '8', '', '', '', '', '', '', '', '2', '', '', '', '', '1475241067', '1475241067', '4', '1');
 INSERT INTO `zj_admin_config` VALUES ('5', 'web_site_description', '站点描述', 'base', 'textarea', '', '', '网站描述，有利于搜索引擎抓取相关信息', '', '', '', '', '', '2', '', '', '', '', '1475241186', '1475241186', '6', '1');
 INSERT INTO `zj_admin_config` VALUES ('6', 'web_site_keywords', '站点关键词', 'base', 'text', '房屋中介系统、PHP开发框架、后台框架', '', '网站搜索引擎关键字', '', '', '', '', '', '2', '', '', '', '', '1475241328', '1475241328', '7', '1');
 INSERT INTO `zj_admin_config` VALUES ('7', 'web_site_copyright', '版权信息', 'base', 'text', 'XXX', '', '调用方式：<code>config(\'web_site_copyright\')</code>', '', '', '', '', '', '2', '', '', '', '', '1475241416', '1477710383', '8', '1');
@@ -241,7 +245,7 @@ INSERT INTO `zj_admin_config` VALUES ('22', 'data_backup_part_size', '数据库�
 INSERT INTO `zj_admin_config` VALUES ('23', 'data_backup_compress', '数据库备份文件是否启用压缩', 'database', 'radio', '1', '0:否\r\n1:是', '压缩备份文件需要PHP环境支持 <code>gzopen</code>, <code>gzwrite</code>函数', '', '', '', '', '', '2', '', '', '', '', '1477017978', '1477018172', '100', '1');
 INSERT INTO `zj_admin_config` VALUES ('24', 'data_backup_compress_level', '数据库备份文件压缩级别', 'database', 'radio', '9', '1:最低\r\n4:一般\r\n9:最高', '数据库备份文件的压缩级别，该配置在开启压缩时生效', '', '', '', '', '', '2', '', '', '', '', '1477018083', '1477018083', '100', '1');
 INSERT INTO `zj_admin_config` VALUES ('25', 'top_menu_max', '顶部导航模块数量', 'system', 'text', '10', '', '设置顶部导航默认显示的模块数量', '', '', '', '', '', '2', '', '', '', '', '1477579289', '1477579289', '103', '1');
-INSERT INTO `zj_admin_config` VALUES ('26', 'web_site_logo_text', '站点LOGO文字', 'base', 'image', '4', '', '', '', '', '', '', '', '2', '', '', '', '', '1477620643', '1477620643', '5', '1');
+INSERT INTO `zj_admin_config` VALUES ('26', 'web_site_logo_text', '站点LOGO文字', 'base', 'image', '5', '', '', '', '', '', '', '', '2', '', '', '', '', '1477620643', '1477620643', '5', '1');
 INSERT INTO `zj_admin_config` VALUES ('27', 'upload_image_thumb', '缩略图尺寸', 'upload', 'text', '', '', '不填写则不生成缩略图，如需生成 <code>300x300</code> 的缩略图，则填写 <code>300,300</code> ，请注意，逗号必须是英文逗号', '', '', '', '', '', '2', '', '', '', '', '1477644150', '1477649513', '100', '1');
 INSERT INTO `zj_admin_config` VALUES ('28', 'upload_image_thumb_type', '缩略图裁剪类型', 'upload', 'radio', '1', '1:等比例缩放\r\n2:缩放后填充\r\n3:居中裁剪\r\n4:左上角裁剪\r\n5:右下角裁剪\r\n6:固定尺寸缩放', '该项配置只有在启用生成缩略图时才生效', '', '', '', '', '', '2', '', '', '', '', '1477646271', '1477649521', '100', '1');
 INSERT INTO `zj_admin_config` VALUES ('29', 'upload_thumb_water', '添加水印', 'upload', 'switch', '0', '', '', '', '', '', '', '', '2', '', '', '', '', '1477649648', '1477649648', '100', '1');
@@ -331,7 +335,7 @@ CREATE TABLE `zj_admin_log` (
   KEY `action_ip_ix` (`action_ip`),
   KEY `action_id_ix` (`action_id`),
   KEY `user_id_ix` (`user_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=59 DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='行为日志表';
+) ENGINE=MyISAM AUTO_INCREMENT=62 DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='行为日志表';
 
 -- ----------------------------
 -- Records of zj_admin_log
@@ -394,6 +398,9 @@ INSERT INTO `zj_admin_log` VALUES ('55', '30', '1', '2130706433', 'admin_menu', 
 INSERT INTO `zj_admin_log` VALUES ('56', '30', '1', '2130706433', 'admin_menu', '406', '超级管理员 添加了节点：所属模块(cms),所属节点ID(401),节点标题(禁用),节点链接(cms/house/disable)', '1', '1517897089');
 INSERT INTO `zj_admin_log` VALUES ('57', '30', '1', '2130706433', 'admin_menu', '407', '超级管理员 添加了节点：所属模块(cms),所属节点ID(401),节点标题(快速编辑),节点链接(cms/house/quickedit)', '1', '1517897114');
 INSERT INTO `zj_admin_log` VALUES ('58', '144', '1', '2130706433', 'cms_advert', '1', '超级管理员 添加了广告：吴伟祥', '1', '1517899156');
+INSERT INTO `zj_admin_log` VALUES ('59', '42', '1', '2130706433', 'admin_config', '0', '超级管理员 更新了系统设置：分组(base)', '1', '1517926008');
+INSERT INTO `zj_admin_log` VALUES ('60', '42', '1', '2130706433', 'admin_config', '0', '超级管理员 更新了系统设置：分组(base)', '1', '1517926621');
+INSERT INTO `zj_admin_log` VALUES ('61', '42', '1', '2130706433', 'admin_config', '0', '超级管理员 更新了系统设置：分组(base)', '1', '1517926757');
 
 -- ----------------------------
 -- Table structure for zj_admin_menu
@@ -756,7 +763,7 @@ CREATE TABLE `zj_admin_user` (
 -- ----------------------------
 -- Records of zj_admin_user
 -- ----------------------------
-INSERT INTO `zj_admin_user` VALUES ('1', 'admin', '超级管理员', '$2y$10$Brw6wmuSLIIx3Yabid8/Wu5l8VQ9M/H/CG3C9RqN9dUCwZW3ljGOK', '', '0', '', '0', '0', '0.00', '0', '1', '0', '0', '1476065410', '1517895785', '1517895785', '2130706433', '100', '1', null, '', null, null);
+INSERT INTO `zj_admin_user` VALUES ('1', 'admin', '超级管理员', '$2y$10$Brw6wmuSLIIx3Yabid8/Wu5l8VQ9M/H/CG3C9RqN9dUCwZW3ljGOK', '', '0', '', '0', '0', '0.00', '0', '1', '0', '0', '1476065410', '1517922247', '1517922247', '2130706433', '100', '1', null, '', null, null);
 INSERT INTO `zj_admin_user` VALUES ('2', 'xiaowu', '吴伟祥', '$2y$10$Okn9s.p0D91489Uc6d7fKOwiBOF.WY.MLnLaLLAmwcg4M7wbVaSkm', '111@qq.com', '0', '18712377078', '0', '0', '0.00', '0', '2', '0', '0', '1517668089', '1517668341', '1517668340', '2130706433', '100', '1', '0', '', null, null);
 INSERT INTO `zj_admin_user` VALUES ('4', 'test123', 'wuweixiang', '$2y$10$d2Qx2IlvZWD6KOZ5E.TH7..QkB6u/3jJGsOwQDeKlGX947SjON6Ga', '', '0', '18712377777', '0', '0', '0.00', '0', '2', '0', '0', '1517668797', '1517668797', '0', '0', '100', '1', '0', '研发部', 'PHP程序员', '0551-7496237');
 INSERT INTO `zj_admin_user` VALUES ('5', 'dnasd', '阿萨达', '$2y$10$986OG1Z1J0DluQuTdRb5uu5n9Ml7g6/jEODeVfyjNN/hGqtLIC7W.', '', '0', '18712377771', '0', '0', '0.00', '0', '2', '0', '0', '1517668873', '1517669274', '0', '0', '100', '1', '1', 'asdad1', 'asdasd', 'asdsad');
@@ -972,6 +979,70 @@ INSERT INTO `zj_cms_field` VALUES ('16', 'status', '状态', 'radio', 'tinyint(2
 INSERT INTO `zj_cms_field` VALUES ('17', 'trash', '回收站', 'text', 'tinyint(2) UNSIGNED NOT NULL', '0', '', '', '0', '0', '0', '', '', '', '', '', '0', '', '', '', '', '1480563576', '1480563576', '100', '1');
 
 -- ----------------------------
+-- Table structure for zj_cms_house
+-- ----------------------------
+DROP TABLE IF EXISTS `zj_cms_house`;
+CREATE TABLE `zj_cms_house` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `uid` int(10) DEFAULT NULL COMMENT '房源编号',
+  `name` varchar(255) DEFAULT NULL COMMENT '楼盘名称',
+  `xquxian` varchar(255) DEFAULT NULL COMMENT '区县',
+  `pianqu` varchar(255) DEFAULT NULL COMMENT '片区名称',
+  `yezhu` varchar(255) DEFAULT NULL COMMENT '业主名称',
+  `mobile` int(11) DEFAULT NULL COMMENT '电话',
+  `phone` varchar(100) DEFAULT NULL,
+  `area` varchar(255) DEFAULT NULL COMMENT '地址',
+  `dongzuo` varchar(100) DEFAULT NULL COMMENT '栋座',
+  `danyuan` varchar(255) DEFAULT NULL COMMENT '单元',
+  `menhao` varchar(255) DEFAULT NULL COMMENT '门号',
+  `fangling` varchar(100) DEFAULT NULL COMMENT '房龄',
+  `chaoxiang` varchar(100) DEFAULT NULL COMMENT '朝向',
+  `louc` varchar(255) DEFAULT NULL COMMENT '楼层',
+  `zlouc` varchar(255) DEFAULT NULL COMMENT '总楼层',
+  `shi` varchar(255) DEFAULT NULL COMMENT '室',
+  `ting` varchar(255) DEFAULT NULL COMMENT '厅',
+  `wei` varchar(255) DEFAULT NULL COMMENT '卫',
+  `chu` varchar(255) DEFAULT NULL COMMENT '厨房',
+  `yangtai` varchar(255) DEFAULT NULL COMMENT '阳台',
+  `yongtu` varchar(255) DEFAULT NULL COMMENT '用途',
+  `leixing` varchar(255) DEFAULT NULL COMMENT '类型',
+  `zhuangxiu` varchar(255) DEFAULT NULL COMMENT '装修',
+  `mianji` varchar(255) DEFAULT NULL COMMENT '面积',
+  `zujin` varchar(255) DEFAULT NULL COMMENT '租金',
+  `xianzhuang` varchar(255) DEFAULT NULL COMMENT '现状',
+  `wuyefei` varchar(255) DEFAULT NULL COMMENT '物业费',
+  `jiegou` varchar(255) DEFAULT NULL COMMENT '结构',
+  `chanquan` varchar(255) DEFAULT NULL COMMENT '产权',
+  `zhengjian` varchar(255) DEFAULT NULL COMMENT '证件',
+  `fukuanstyle` varchar(255) DEFAULT NULL COMMENT '付款方式',
+  `kanfst` varchar(255) DEFAULT NULL COMMENT '看房方式',
+  `yaoshi` varchar(255) DEFAULT NULL COMMENT '钥匙编号',
+  `fangwuss` varchar(255) DEFAULT NULL COMMENT '房屋设施',
+  `zbhj` varchar(255) DEFAULT NULL COMMENT '周边环境',
+  `jtqk` varchar(255) DEFAULT NULL COMMENT '交通情况',
+  `beizhus` varchar(255) DEFAULT NULL COMMENT '备注',
+  `biaoqian` varchar(255) DEFAULT NULL COMMENT '标签',
+  `kaifas` varchar(255) DEFAULT NULL COMMENT '开发商',
+  `shiyongmj` varchar(255) DEFAULT NULL COMMENT '使用面积',
+  `fdmc` varchar(255) DEFAULT NULL COMMENT '分店名称',
+  `ygxm` varchar(255) DEFAULT NULL COMMENT '员工姓名',
+  `ygdh` varchar(255) DEFAULT NULL COMMENT '员工电话',
+  `pan` varchar(255) DEFAULT NULL COMMENT '盘',
+  `weituot` varchar(255) DEFAULT NULL COMMENT '委托日期',
+  `jfrq` varchar(255) DEFAULT NULL COMMENT '交房日期',
+  `llrq` varchar(255) DEFAULT NULL COMMENT '录入日期',
+  `zhgjsj` varchar(255) DEFAULT NULL COMMENT '最后跟进时间',
+  `dqrq` varchar(255) DEFAULT NULL COMMENT '到期日期',
+  `status` tinyint(2) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of zj_cms_house
+-- ----------------------------
+INSERT INTO `zj_cms_house` VALUES ('1', '256', '万科中心', '庐阳区', '', '章女士', '551749622', '13349294199', '四里河与潜山路', 'A', '2', '304', '10年', '南北', '5', '20', '2', '3', '4', '2', '1', '写字楼', '多层', '毛坯', '123', '45', '良好', '4', '框架·', '商品房', '没有', '半年付', '提前预约', '33', '无', '商业区', '公交', '三号线站口', '1', '万科地产', '332', '系统默认总店', '陆核', '17318511237', '私', '2018/2/5 18:05:56', '2018/2/5 18:05:56', '2018/2/5 18:05:56', '2018/2/5 18:05:56', '2018/2/5 18:05:56', '1');
+
+-- ----------------------------
 -- Table structure for zj_cms_link
 -- ----------------------------
 DROP TABLE IF EXISTS `zj_cms_link`;
@@ -1135,3 +1206,4 @@ CREATE TABLE `zj_cms_support` (
 -- ----------------------------
 -- Records of zj_cms_support
 -- ----------------------------
+SET FOREIGN_KEY_CHECKS=1;
