@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : 本地
+Source Server         : locaohost
 Source Server Version : 50719
-Source Host           : localhost:3306
+Source Host           : 127.0.0.1:3306
 Source Database       : dolphin
 
 Target Server Type    : MYSQL
 Target Server Version : 50719
 File Encoding         : 65001
 
-Date: 2018-02-06 01:43:55
+Date: 2018-02-06 14:07:56
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -223,7 +223,7 @@ INSERT INTO `zj_admin_config` VALUES ('3', 'web_site_slogan', '站点标语', 'b
 INSERT INTO `zj_admin_config` VALUES ('4', 'web_site_logo', '站点LOGO', 'base', 'image', '3', '', '', '', '', '', '', '', '2', '', '', '', '', '1475241067', '1475241067', '4', '1');
 INSERT INTO `zj_admin_config` VALUES ('5', 'web_site_description', '站点描述', 'base', 'textarea', '', '', '网站描述，有利于搜索引擎抓取相关信息', '', '', '', '', '', '2', '', '', '', '', '1475241186', '1475241186', '6', '1');
 INSERT INTO `zj_admin_config` VALUES ('6', 'web_site_keywords', '站点关键词', 'base', 'text', '房屋中介系统、PHP开发框架、后台框架', '', '网站搜索引擎关键字', '', '', '', '', '', '2', '', '', '', '', '1475241328', '1475241328', '7', '1');
-INSERT INTO `zj_admin_config` VALUES ('7', 'web_site_copyright', '版权信息', 'base', 'text', 'Copyright © 2015-2017 DolphinPHP All rights reserved.', '', '调用方式：<code>config(\'web_site_copyright\')</code>', '', '', '', '', '', '2', '', '', '', '', '1475241416', '1477710383', '8', '1');
+INSERT INTO `zj_admin_config` VALUES ('7', 'web_site_copyright', '版权信息', 'base', 'text', 'XXX', '', '调用方式：<code>config(\'web_site_copyright\')</code>', '', '', '', '', '', '2', '', '', '', '', '1475241416', '1477710383', '8', '1');
 INSERT INTO `zj_admin_config` VALUES ('8', 'web_site_icp', '备案信息', 'base', 'text', '', '', '调用方式：<code>config(\'web_site_icp\')</code>', '', '', '', '', '', '2', '', '', '', '', '1475241441', '1477710441', '9', '1');
 INSERT INTO `zj_admin_config` VALUES ('9', 'web_site_statistics', '站点统计', 'base', 'textarea', '', '', '网站统计代码，支持百度、Google、cnzz等，调用方式：<code>config(\'web_site_statistics\')</code>', '', '', '', '', '', '2', '', '', '', '', '1475241498', '1477710455', '10', '1');
 INSERT INTO `zj_admin_config` VALUES ('10', 'config_group', '配置分组', 'system', 'array', 'base:基本\r\nsystem:系统\r\nupload:上传\r\ndevelop:开发\r\ndatabase:数据库', '', '', '', '', '', '', '', '2', '', '', '', '', '1475241716', '1477649446', '100', '1');
@@ -233,7 +233,7 @@ INSERT INTO `zj_admin_config` VALUES ('13', 'upload_file_ext', '允许上传的�
 INSERT INTO `zj_admin_config` VALUES ('14', 'upload_image_size', '图片上传大小限制', 'upload', 'text', '0', '', '0为不限制大小，单位：kb', '', '', '', '', '', '2', '', '', '', '', '1475242015', '1477663529', '100', '1');
 INSERT INTO `zj_admin_config` VALUES ('15', 'upload_image_ext', '允许上传的图片后缀', 'upload', 'tags', 'gif,jpg,jpeg,bmp,png', '', '多个后缀用逗号隔开，不填写则不限制类型', '', '', '', '', '', '2', '', '', '', '', '1475242056', '1477649506', '100', '1');
 INSERT INTO `zj_admin_config` VALUES ('16', 'list_rows', '分页数量', 'system', 'number', '20', '', '每页的记录数', '', '', '', '', '', '2', '', '', '', '', '1475242066', '1476074507', '101', '1');
-INSERT INTO `zj_admin_config` VALUES ('17', 'system_color', '后台配色方案', 'system', 'radio', 'default', 'default:Default\r\namethyst:Amethyst\r\ncity:City\r\nflat:Flat\r\nmodern:Modern\r\nsmooth:Smooth', '', '', '', '', '', '', '2', '', '', '', '', '1475250066', '1477316689', '102', '1');
+INSERT INTO `zj_admin_config` VALUES ('17', 'system_color', '后台配色方案', 'system', 'radio', 'smooth', 'default:Default\r\namethyst:Amethyst\r\ncity:City\r\nflat:Flat\r\nmodern:Modern\r\nsmooth:Smooth', '', '', '', '', '', '', '2', '', '', '', '', '1475250066', '1477316689', '102', '1');
 INSERT INTO `zj_admin_config` VALUES ('18', 'develop_mode', '开发模式', 'develop', 'radio', '0', '0:关闭\r\n1:开启', '', '', '', '', '', '', '2', '', '', '', '', '1476864205', '1476864231', '100', '1');
 INSERT INTO `zj_admin_config` VALUES ('19', 'app_trace', '显示页面Trace', 'develop', 'radio', '0', '0:否\r\n1:是', '', '', '', '', '', '', '2', '', '', '', '', '1476866355', '1476866355', '100', '1');
 INSERT INTO `zj_admin_config` VALUES ('21', 'data_backup_path', '数据库备份根路径', 'database', 'text', '../data/', '', '路径必须以 / 结尾', '', '', '', '', '', '2', '', '', '', '', '1477017745', '1477018467', '100', '1');
@@ -331,7 +331,7 @@ CREATE TABLE `zj_admin_log` (
   KEY `action_ip_ix` (`action_ip`),
   KEY `action_id_ix` (`action_id`),
   KEY `user_id_ix` (`user_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=49 DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='行为日志表';
+) ENGINE=MyISAM AUTO_INCREMENT=58 DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='行为日志表';
 
 -- ----------------------------
 -- Records of zj_admin_log
@@ -384,6 +384,15 @@ INSERT INTO `zj_admin_log` VALUES ('45', '143', '1', '2130706433', 'cms_advert',
 INSERT INTO `zj_admin_log` VALUES ('46', '31', '1', '2130706433', 'admin_menu', '401', '超级管理员 编辑了节点：节点ID(401)', '1', '1517848090');
 INSERT INTO `zj_admin_log` VALUES ('47', '31', '1', '2130706433', 'admin_menu', '330', '超级管理员 编辑了节点：节点ID(330)', '1', '1517848111');
 INSERT INTO `zj_admin_log` VALUES ('48', '42', '1', '2130706433', 'admin_config', '0', '超级管理员 更新了系统设置：分组(base)', '1', '1517851791');
+INSERT INTO `zj_admin_log` VALUES ('49', '42', '1', '2130706433', 'admin_config', '0', '超级管理员 更新了系统设置：分组(base)', '1', '1517895332');
+INSERT INTO `zj_admin_log` VALUES ('50', '42', '1', '2130706433', 'admin_config', '0', '超级管理员 更新了系统设置：分组(cms)', '1', '1517895838');
+INSERT INTO `zj_admin_log` VALUES ('51', '30', '1', '2130706433', 'admin_menu', '402', '超级管理员 添加了节点：所属模块(cms),所属节点ID(401),节点标题(新增),节点链接(cms/advert/add)', '1', '1517896964');
+INSERT INTO `zj_admin_log` VALUES ('52', '31', '1', '2130706433', 'admin_menu', '402', '超级管理员 编辑了节点：节点ID(402)', '1', '1517896981');
+INSERT INTO `zj_admin_log` VALUES ('53', '30', '1', '2130706433', 'admin_menu', '403', '超级管理员 添加了节点：所属模块(cms),所属节点ID(401),节点标题(编辑),节点链接(cms/house/edit)', '1', '1517897005');
+INSERT INTO `zj_admin_log` VALUES ('54', '30', '1', '2130706433', 'admin_menu', '404', '超级管理员 添加了节点：所属模块(cms),所属节点ID(401),节点标题(删除),节点链接(cms/house/delete)', '1', '1517897039');
+INSERT INTO `zj_admin_log` VALUES ('55', '30', '1', '2130706433', 'admin_menu', '405', '超级管理员 添加了节点：所属模块(cms),所属节点ID(401),节点标题(启用),节点链接(cms/house/enable)', '1', '1517897060');
+INSERT INTO `zj_admin_log` VALUES ('56', '30', '1', '2130706433', 'admin_menu', '406', '超级管理员 添加了节点：所属模块(cms),所属节点ID(401),节点标题(禁用),节点链接(cms/house/disable)', '1', '1517897089');
+INSERT INTO `zj_admin_log` VALUES ('57', '30', '1', '2130706433', 'admin_menu', '407', '超级管理员 添加了节点：所属模块(cms),所属节点ID(401),节点标题(快速编辑),节点链接(cms/house/quickedit)', '1', '1517897114');
 
 -- ----------------------------
 -- Table structure for zj_admin_menu
@@ -406,7 +415,7 @@ CREATE TABLE `zj_admin_menu` (
   `status` tinyint(2) NOT NULL DEFAULT '1' COMMENT '状态',
   `params` varchar(255) NOT NULL DEFAULT '' COMMENT '参数',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=402 DEFAULT CHARSET=utf8 COMMENT='后台菜单表';
+) ENGINE=MyISAM AUTO_INCREMENT=408 DEFAULT CHARSET=utf8 COMMENT='后台菜单表';
 
 -- ----------------------------
 -- Records of zj_admin_menu
@@ -598,6 +607,12 @@ INSERT INTO `zj_admin_menu` VALUES ('398', '394', 'cms', '启用', '', 'module_a
 INSERT INTO `zj_admin_menu` VALUES ('399', '394', 'cms', '禁用', '', 'module_admin', 'cms/menu/disable', '_self', '0', '1517733761', '1517733761', '100', '0', '1', '');
 INSERT INTO `zj_admin_menu` VALUES ('400', '394', 'cms', '快速编辑', '', 'module_admin', 'cms/menu/quickedit', '_self', '0', '1517733761', '1517733761', '100', '0', '1', '');
 INSERT INTO `zj_admin_menu` VALUES ('401', '328', 'cms', '房源信息列表（待开发）', 'fa fa-fw fa-user-circle', 'module_admin', 'cms/house/index', '_self', '0', '1517736924', '1517848090', '100', '0', '1', '');
+INSERT INTO `zj_admin_menu` VALUES ('402', '401', 'cms', '新增', '', 'module_admin', 'cms/house/add', '_self', '0', '1517896964', '1517896981', '100', '0', '1', '');
+INSERT INTO `zj_admin_menu` VALUES ('403', '401', 'cms', '编辑', '', 'module_admin', 'cms/house/edit', '_self', '0', '1517897005', '1517897005', '100', '0', '1', '');
+INSERT INTO `zj_admin_menu` VALUES ('404', '401', 'cms', '删除', '', 'module_admin', 'cms/house/delete', '_self', '0', '1517897039', '1517897039', '100', '0', '1', '');
+INSERT INTO `zj_admin_menu` VALUES ('405', '401', 'cms', '启用', '', 'module_admin', 'cms/house/enable', '_self', '0', '1517897060', '1517897060', '100', '0', '1', '');
+INSERT INTO `zj_admin_menu` VALUES ('406', '401', 'cms', '禁用', '', 'module_admin', 'cms/house/disable', '_self', '0', '1517897089', '1517897089', '100', '0', '1', '');
+INSERT INTO `zj_admin_menu` VALUES ('407', '401', 'cms', '快速编辑', '', 'module_admin', 'cms/house/quickedit', '_self', '0', '1517897114', '1517897114', '100', '0', '1', '');
 
 -- ----------------------------
 -- Table structure for zj_admin_module
@@ -628,7 +643,7 @@ CREATE TABLE `zj_admin_module` (
 -- ----------------------------
 INSERT INTO `zj_admin_module` VALUES ('2', 'admin', '系统', 'fa fa-fw fa-gear', '系统模块，DolphinPHP的核心模块', 'DolphinPHP', 'http://www.dolphinphp.com', '', '', '1.0.0', 'admin.dolphinphp.module', '1', '1468204902', '1468204902', '100', '1');
 INSERT INTO `zj_admin_module` VALUES ('1', 'user', '用户', 'fa fa-fw fa-user', '用户模块，DolphinPHP自带模块', 'DolphinPHP', 'http://www.dolphinphp.com', '', '', '1.0.0', 'user.dolphinphp.module', '1', '1468204902', '1468204902', '100', '1');
-INSERT INTO `zj_admin_module` VALUES ('4', 'cms', '门户', 'fa fa-fw fa-newspaper-o', '门户模块', 'CaiWeiMing', 'http://www.dolphinphp.com', '{\"summary\":0,\"contact\":\"<div class=\\\"font-s13 push\\\"><strong>XXX\\u9650\\u516c\\u53f8<\\/strong><br \\/>\\n\\u5730\\u5740\\uff1a\\u6cb3\\u6e90\\u5e02\\u6c5f\\u4e1c\\u65b0\\u533a\\u4e1c\\u73af\\u8def\\u6c47\\u901a\\u82d1D3-H232<br \\/>\\n\\u7535\\u8bdd\\uff1a0762-8910006<br \\/>\\n\\u90ae\\u7bb1\\uff1aadmin@zrthink.com<\\/div>\",\"meta_head\":\"\",\"meta_foot\":\"\",\"support_status\":1,\"support_color\":\"rgba(0,158,232,1)\",\"support_wx\":\"\",\"support_extra\":\"\"}', '{\"group\":{\"tab_title\":\"\\u680f\\u76ee\\u6388\\u6743\",\"table_name\":\"cms_column\",\"primary_key\":\"id\",\"parent_id\":\"pid\",\"node_name\":\"name\"}}', '1.0.0', 'cms.ming.module', '0', '1517733761', '1517733819', '100', '1');
+INSERT INTO `zj_admin_module` VALUES ('4', 'cms', '门户', 'fa fa-fw fa-newspaper-o', '门户模块', 'CaiWeiMing', 'http://www.dolphinphp.com', '{\"summary\":\"0\",\"contact\":\"\",\"meta_head\":\"\",\"meta_foot\":\"\",\"support_status\":\"1\",\"support_color\":\"rgba(0,158,232,1)\",\"support_wx\":\"\",\"support_extra\":\"\"}', '{\"group\":{\"tab_title\":\"\\u680f\\u76ee\\u6388\\u6743\",\"table_name\":\"cms_column\",\"primary_key\":\"id\",\"parent_id\":\"pid\",\"node_name\":\"name\"}}', '1.0.0', 'cms.ming.module', '0', '1517733761', '1517733819', '100', '1');
 
 -- ----------------------------
 -- Table structure for zj_admin_packet
@@ -740,7 +755,7 @@ CREATE TABLE `zj_admin_user` (
 -- ----------------------------
 -- Records of zj_admin_user
 -- ----------------------------
-INSERT INTO `zj_admin_user` VALUES ('1', 'admin', '超级管理员', '$2y$10$Brw6wmuSLIIx3Yabid8/Wu5l8VQ9M/H/CG3C9RqN9dUCwZW3ljGOK', '', '0', '', '0', '0', '0.00', '0', '1', '0', '0', '1476065410', '1517851750', '1517851750', '2130706433', '100', '1', null, '', null, null);
+INSERT INTO `zj_admin_user` VALUES ('1', 'admin', '超级管理员', '$2y$10$Brw6wmuSLIIx3Yabid8/Wu5l8VQ9M/H/CG3C9RqN9dUCwZW3ljGOK', '', '0', '', '0', '0', '0.00', '0', '1', '0', '0', '1476065410', '1517895785', '1517895785', '2130706433', '100', '1', null, '', null, null);
 INSERT INTO `zj_admin_user` VALUES ('2', 'xiaowu', '吴伟祥', '$2y$10$Okn9s.p0D91489Uc6d7fKOwiBOF.WY.MLnLaLLAmwcg4M7wbVaSkm', '111@qq.com', '0', '18712377078', '0', '0', '0.00', '0', '2', '0', '0', '1517668089', '1517668341', '1517668340', '2130706433', '100', '1', '0', '', null, null);
 INSERT INTO `zj_admin_user` VALUES ('4', 'test123', 'wuweixiang', '$2y$10$d2Qx2IlvZWD6KOZ5E.TH7..QkB6u/3jJGsOwQDeKlGX947SjON6Ga', '', '0', '18712377777', '0', '0', '0.00', '0', '2', '0', '0', '1517668797', '1517668797', '0', '0', '100', '1', '0', '研发部', 'PHP程序员', '0551-7496237');
 INSERT INTO `zj_admin_user` VALUES ('5', 'dnasd', '阿萨达', '$2y$10$986OG1Z1J0DluQuTdRb5uu5n9Ml7g6/jEODeVfyjNN/hGqtLIC7W.', '', '0', '18712377771', '0', '0', '0.00', '0', '2', '0', '0', '1517668873', '1517669274', '0', '0', '100', '1', '1', 'asdad1', 'asdasd', 'asdsad');
@@ -1118,4 +1133,3 @@ CREATE TABLE `zj_cms_support` (
 -- ----------------------------
 -- Records of zj_cms_support
 -- ----------------------------
-SET FOREIGN_KEY_CHECKS=1;
