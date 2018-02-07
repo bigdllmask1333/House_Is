@@ -211,12 +211,12 @@ class Attachment extends Admin
         if ($ext_limit == '') {
             $error_msg = '获取文件信息失败！';
         }
-        if ($file->getMime() == 'text/x-php' || $file->getMime() == 'text/html') {
-            $error_msg = '禁止上传非法文件！';
-        }
-        if (preg_grep("/php/i", $ext_limit)) {
-            $error_msg = '禁止上传非法文件！';
-        }
+//        if ($file->getMime() == 'text/x-php' || $file->getMime() == 'text/html') {
+//            $error_msg = '禁止上传非法文件！';
+//        }
+//        if (preg_grep("/php/i", $ext_limit)) {
+//            $error_msg = '禁止上传非法文件！';
+//        }
         if (!preg_grep("/$file_ext/i", $ext_limit)) {
             $error_msg = '附件类型不正确！';
         }

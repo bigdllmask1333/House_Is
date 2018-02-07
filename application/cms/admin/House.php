@@ -37,12 +37,12 @@ class House extends Admin
         // 数据列表
         $data_list = HouseModel::where($map)->order($order)->paginate();
 
-//        $btnType = [
-//            'class' => 'btn btn-info',
-//            'title' => '广告分类',
-//            'icon'  => 'fa fa-fw fa-sitemap',
-//            'href'  => url('advert_type/index')
-//        ];
+        $btnType = [
+            'class' => 'btn btn-info',
+            'title' => '导入数据',
+            'icon'  => 'fa fa-fw fa-sitemap',
+            'href'  => url('house_type/index')
+        ];
 
         $list_type = AdvertTypeModel::where('status', 1)->column('id,name');
         array_unshift($list_type, '默认分类');
@@ -69,12 +69,17 @@ class House extends Admin
                 ['right_button', '操作', 'btn']
             ])
             ->addTopButtons('add,enable,disable,delete') // 批量添加顶部按钮
-//            ->addTopButton('custom', $btnType) // 添加顶部按钮
+            ->addTopButton('custom', $btnType) // 添加顶部按钮
             ->addRightButtons(['edit', 'delete' => ['data-tips' => '删除后无法恢复。']]) // 批量添加右侧按钮
             ->addOrder('id,name,typeid,timeset,ad_type,create_time,update_time')
             ->setRowList($data_list) // 设置表格数据
             ->addValidate('Advert', 'name')
             ->fetch(); // 渲染模板
+    }
+
+
+    public function save(){
+
     }
 
     /**
