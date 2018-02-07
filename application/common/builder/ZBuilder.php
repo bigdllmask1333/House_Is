@@ -17,13 +17,13 @@ use think\Exception;
 /**
  * 构建器
  * @package app\common\builder
- * @author 蔡伟明 <314013107@qq.com>
+ *    
  */
 class ZBuilder extends Common
 {
     /**
      * @var array 构建器数组
-     * @author 蔡伟明 <314013107@qq.com>
+     *    
      */
     protected static $builder = [];
 
@@ -39,7 +39,7 @@ class ZBuilder extends Common
 
     /**
      * 初始化
-     * @author 蔡伟明 <314013107@qq.com>
+     *    
      */
     public function _initialize()
     {}
@@ -48,7 +48,7 @@ class ZBuilder extends Common
      * 创建各种builder的入口
      * @param string $type 构建器名称，'Form', 'Table', 'View' 或其他自定义构建器
      * @param string $action 动作
-     * @author 蔡伟明 <314013107@qq.com>
+     *    
      * @return table\Builder|form\Builder|aside\Builder
      * @throws Exception
      */
@@ -81,7 +81,7 @@ class ZBuilder extends Common
      * @param array  $vars     模板输出变量
      * @param array  $replace  模板替换
      * @param array  $config   模板参数
-     * @author 蔡伟明 <314013107@qq.com>
+     *    
      * @return mixed
      */
     public function fetch($template = '', $vars = [], $replace = [], $config = [])

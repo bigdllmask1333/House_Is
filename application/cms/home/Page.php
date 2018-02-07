@@ -22,7 +22,7 @@ class Page extends Common
     /**
      * 单页详情
      * @param null $id 单页id
-     * @author 蔡伟明 <314013107@qq.com>
+     *
      * @return mixed
      */
     public function detail($id = null)

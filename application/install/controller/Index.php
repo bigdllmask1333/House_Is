@@ -24,7 +24,7 @@ class Index extends Controller
 {
     /**
      * 获取入口目录
-     * @author 蔡伟明 <314013107@qq.com>
+     *    
      */
     protected function _initialize() {
         $this->assign('static_dir', 'static/');
@@ -32,7 +32,7 @@ class Index extends Controller
 
     /**
      * 安装首页
-     * @author 蔡伟明 <314013107@qq.com>
+     *    
      */
     public function index()
     {
@@ -52,7 +52,7 @@ class Index extends Controller
 
     /**
      * 步骤二，检查环境
-     * @author 蔡伟明 <314013107@qq.com>
+     *    
      * @return mixed
      */
     public function step2()
@@ -85,7 +85,7 @@ class Index extends Controller
 
     /**
      * 步骤三，设置数据库连接
-     * @author 蔡伟明 <314013107@qq.com>
+     *    
      * @return mixed
      */
     public function step3()
@@ -108,7 +108,7 @@ class Index extends Controller
      * 步骤四，创建数据库
      * @param null $db 数据库配置信息
      * @param int $cover 是否覆盖已存在数据库
-     * @author 蔡伟明 <314013107@qq.com>
+     *    
      * @return mixed
      */
     public function step4($db = null, $cover = 0)
@@ -168,7 +168,7 @@ class Index extends Controller
 
     /**
      * 完成安装
-     * @author 蔡伟明 <314013107@qq.com>
+     *    
      * @return mixed
      */
     public function complete()

@@ -21,7 +21,7 @@ class Ie extends Common
 {
     /**
      * 显示ie提示
-     * @author 蔡伟明 <314013107@qq.com>
+     *    
      * @return mixed
      */
     public function index(){

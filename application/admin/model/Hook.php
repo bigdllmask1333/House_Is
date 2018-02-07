@@ -29,7 +29,7 @@ class Hook extends Model
      * 添加钩子
      * @param array $hooks 钩子
      * @param string $plugin_name 插件名称
-     * @author 蔡伟明 <314013107@qq.com>
+     *    
      * @return bool
      */
     public static function addHooks($hooks = [], $plugin_name = '')
@@ -62,7 +62,7 @@ class Hook extends Model
     /**
      * 删除钩子
      * @param string $plugin_name 钩子名称
-     * @author 蔡伟明 <314013107@qq.com>
+     *    
      * @return bool
      */
     public static function deleteHooks($plugin_name = '')

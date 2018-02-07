@@ -24,7 +24,7 @@ class Content extends Admin
 {
     /**
      * 空操作，用于显示各个模型的文档列表
-     * @author 蔡伟明 <314013107@qq.com>
+     *    
      */
     public function _empty()
     {

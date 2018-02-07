@@ -18,7 +18,7 @@ use app\admin\model\Plugin as PluginModel;
 /**
  * 注册钩子
  * @package app\common\behavior
- * @author 蔡伟明 <314013107@qq.com>
+ *    
  */
 class Hook
 {

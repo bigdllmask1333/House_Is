@@ -29,7 +29,7 @@ class Packet extends Model
 
     /**
      * 获取所有数据包列表
-     * @author 蔡伟明 <314013107@qq.com>
+     *    
      * @return array|bool
      */
     public function getAll()
@@ -59,7 +59,7 @@ class Packet extends Model
     /**
      * 从文件获取数据包信息
      * @param string $name 数据包名称
-     * @author 蔡伟明 <314013107@qq.com>
+     *    
      * @return array|mixed
      */
     public static function getInfoFromFile($name = '')
@@ -77,7 +77,7 @@ class Packet extends Model
     /**
      * 安装数据包
      * @param string $name 数据包名
-     * @author 蔡伟明 <314013107@qq.com>
+     *    
      * @return bool
      */
     public static function install($name = '')
@@ -109,7 +109,7 @@ class Packet extends Model
     /**
      * 卸载数据包
      * @param string $name 数据包名
-     * @author 蔡伟明 <314013107@qq.com>
+     *    
      * @return bool
      */
     public static function uninstall($name = '')

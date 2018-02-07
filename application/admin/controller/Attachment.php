@@ -26,7 +26,7 @@ class Attachment extends Admin
 {
     /**
      * 附件列表
-     * @author 蔡伟明 <314013107@qq.com>
+     *    
      */
     public function index()
     {
@@ -93,7 +93,7 @@ class Attachment extends Admin
      * @param string $dir 保存的目录:images,files,videos,voices
      * @param string $from 来源，wangeditor：wangEditor编辑器, ueditor:ueditor编辑器, editormd:editormd编辑器等
      * @param string $module 来自哪个模块
-     * @author 蔡伟明 <314013107@qq.com>
+     *    
      * @return mixed
      */
     public function upload($dir = '', $from = '', $module = '')
@@ -111,7 +111,7 @@ class Attachment extends Admin
      * @param string $dir 附件存放的目录
      * @param string $from 来源
      * @param string $module 来自哪个模块
-     * @author 蔡伟明 <314013107@qq.com>
+     *    
      * @return string|\think\response\Json
      */
     private function saveFile($dir = '', $from = '', $module = '')
@@ -355,7 +355,7 @@ class Attachment extends Admin
 
     /**
      * 处理ueditor上传
-     * @author 蔡伟明 <314013107@qq.com>
+     *    
      * @return string|\think\response\Json
      */
     private function ueditor(){
@@ -421,7 +421,7 @@ class Attachment extends Admin
 
     /**
      * 保存涂鸦（ueditor）
-     * @author 蔡伟明 <314013107@qq.com>
+     *    
      * @return \think\response\Json
      */
     private function saveScrawl()
@@ -469,7 +469,7 @@ class Attachment extends Admin
      * 显示附件列表（ueditor）
      * @param string $type 类型
      * @param $config
-     * @author 蔡伟明 <314013107@qq.com>
+     *    
      * @return \think\response\Json
      */
     private function showFile($type = '', $config){
@@ -529,7 +529,7 @@ class Attachment extends Admin
 
     /**
      * 处理Jcrop图片裁剪
-     * @author 蔡伟明 <314013107@qq.com>
+     *    
      */
     private function jcrop()
     {
@@ -619,7 +619,7 @@ class Attachment extends Admin
      * @param string $file 目标文件，可以是文件对象或文件路径
      * @param string $dir 保存目录，即目标文件所在的目录名
      * @param string $save_name 缩略图名
-     * @author 蔡伟明 <314013107@qq.com>
+     *    
      * @return string 缩略图路径
      */
     private function create_thumb($file = '', $dir = '', $save_name = '')
@@ -644,7 +644,7 @@ class Attachment extends Admin
     /**
      * 添加水印
      * @param string $file 要添加水印的文件路径
-     * @author 蔡伟明 <314013107@qq.com>
+     *    
      */
     private function create_water($file = '')
     {
@@ -664,7 +664,7 @@ class Attachment extends Admin
      * @param string $path 路径
      * @param string $allowFiles 允许查看的类型
      * @param array $files 文件列表
-     * @author 蔡伟明 <314013107@qq.com>
+     *    
      * @return array|null
      */
     public function getfiles($path = '', $allowFiles = '', &$files = array())
@@ -693,7 +693,7 @@ class Attachment extends Admin
     /**
      * 启用附件
      * @param array $record 行为日志
-     * @author 蔡伟明 <314013107@qq.com>
+     *    
      * @return mixed
      */
     public function enable($record = [])
@@ -704,7 +704,7 @@ class Attachment extends Admin
     /**
      * 禁用附件
      * @param array $record 行为日志
-     * @author 蔡伟明 <314013107@qq.com>
+     *    
      * @return mixed
      */
     public function disable($record = [])
@@ -716,7 +716,7 @@ class Attachment extends Admin
      * 设置附件状态：删除、禁用、启用
      * @param string $type 类型：delete/enable/disable
      * @param array $record
-     * @author 蔡伟明 <314013107@qq.com>
+     *    
      * @return mixed
      */
     public function setStatus($type = '', $record = [])
@@ -729,7 +729,7 @@ class Attachment extends Admin
     /**
      * 删除附件
      * @param string $ids 附件id
-     * @author 蔡伟明 <314013107@qq.com>
+     *    
      * @return mixed
      */
     public function delete($ids = '')
@@ -763,7 +763,7 @@ class Attachment extends Admin
     /**
      * 快速编辑
      * @param array $record 行为日志
-     * @author 蔡伟明 <314013107@qq.com>
+     *    
      * @return mixed
      */
     public function quickEdit($record = [])

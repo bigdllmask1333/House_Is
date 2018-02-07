@@ -23,7 +23,7 @@ class Action extends Admin
 {
     /**
      * 首页
-     * @author 蔡伟明 <314013107@qq.com>
+     *
      * @return mixed
      */
     public function index()

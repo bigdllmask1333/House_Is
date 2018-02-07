@@ -23,7 +23,7 @@ class Publics extends Common
 {
     /**
      * 用户登录
-     * @author 蔡伟明 <314013107@qq.com>
+     *
      * @return mixed
      */
     public function signin()
@@ -87,7 +87,7 @@ class Publics extends Common
 
     /**
      * 退出登录
-     * @author 蔡伟明 <314013107@qq.com>
+     *
      */
     public function signout()
     {

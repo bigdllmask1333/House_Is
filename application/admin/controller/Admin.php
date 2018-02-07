@@ -29,7 +29,7 @@ class Admin extends Common
 {
     /**
      * 初始化
-     * @author 蔡伟明 <314013107@qq.com>
+     *    
      */
     protected function _initialize()
     {
@@ -88,7 +88,7 @@ class Admin extends Common
 
     /**
      * 获取当前操作模型
-     * @author 蔡伟明 <314013107@qq.com>
+     *    
      * @return object|\think\db\Query
      */
     final protected function getCurrModel()
@@ -126,7 +126,7 @@ class Admin extends Common
 
     /**
      * 设置分页参数
-     * @author 蔡伟明 <314013107@qq.com>
+     *    
      */
     final protected function setPageParam()
     {
@@ -138,7 +138,7 @@ class Admin extends Common
 
     /**
      * 检查是否登录，没有登录则跳转到登录页面
-     * @author 蔡伟明 <314013107@qq.com>
+     *    
      * @return int
      */
     final protected function isLogin()
@@ -156,7 +156,7 @@ class Admin extends Common
     /**
      * 禁用
      * @param array $record 行为日志内容
-     * @author 蔡伟明 <314013107@qq.com>
+     *    
      * @return mixed
      */
     public function disable($record = [])
@@ -167,7 +167,7 @@ class Admin extends Common
     /**
      * 启用
      * @param array $record 行为日志内容
-     * @author 蔡伟明 <314013107@qq.com>
+     *    
      * @return mixed
      */
     public function enable($record = [])
@@ -178,7 +178,7 @@ class Admin extends Common
     /**
      * 启用
      * @param array $record 行为日志内容
-     * @author 蔡伟明 <314013107@qq.com>
+     *    
      * @return mixed
      */
     public function delete($record = [])
@@ -189,7 +189,7 @@ class Admin extends Common
     /**
      * 快速编辑
      * @param array $record 行为日志内容
-     * @author 蔡伟明 <314013107@qq.com>
+     *    
      */
     public function quickEdit($record = [])
     {
@@ -385,7 +385,7 @@ class Admin extends Common
      * 禁用、启用、删除都是调用这个内部方法
      * @param string $type 操作类型：enable,disable,delete
      * @param array $record 行为日志内容
-     * @author 蔡伟明 <314013107@qq.com>
+     *    
      * @return mixed
      */
     public function setStatus($type = '', $record = [])
@@ -445,7 +445,7 @@ class Admin extends Common
 
     /**
      * 模块设置
-     * @author 蔡伟明 <314013107@qq.com>
+     *    
      * @return mixed
      */
     public function moduleConfig()

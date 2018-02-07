@@ -23,7 +23,7 @@ class Packet extends Admin
     /**
      * 首页
      * @param string $group 分组
-     * @author 蔡伟明 <314013107@qq.com>
+     *
      * @return mixed
      */
     public function index($group = 'local')
@@ -105,7 +105,7 @@ class Packet extends Admin
     /**
      * 安装
      * @param string $name 数据包名
-     * @author 蔡伟明 <314013107@qq.com>
+     *
      * @return mixed
      */
     public function install($name = '')
@@ -134,7 +134,7 @@ class Packet extends Admin
     /**
      * 卸载
      * @param string $name 数据包名
-     * @author 蔡伟明 <314013107@qq.com>
+     *
      */
     public function uninstall($name = '')
     {

@@ -16,7 +16,7 @@ use app\common\controller\Plugin;
 /**
  * 系统环境信息插件
  * @package plugins\DevTeam
- * @author 蔡伟明 <314013107@qq.com>
+ *    
  */
 class DevTeam extends Plugin
 {
@@ -53,7 +53,7 @@ class DevTeam extends Plugin
 
     /**
      * 后台首页钩子
-     * @author 蔡伟明 <314013107@qq.com>
+     *    
      */
     public function adminIndex()
     {
@@ -65,7 +65,7 @@ class DevTeam extends Plugin
 
     /**
      * 安装方法
-     * @author 蔡伟明 <314013107@qq.com>
+     *    
      * @return bool
      */
     public function install(){
@@ -74,7 +74,7 @@ class DevTeam extends Plugin
 
     /**
      * 卸载方法必
-     * @author 蔡伟明 <314013107@qq.com>
+     *    
      * @return bool
      */
     public function uninstall(){
