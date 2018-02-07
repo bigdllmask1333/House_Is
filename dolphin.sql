@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : 本地
+Source Server         : locaohost
 Source Server Version : 50719
-Source Host           : localhost:3306
+Source Host           : 127.0.0.1:3306
 Source Database       : dolphin
 
 Target Server Type    : MYSQL
 Target Server Version : 50719
 File Encoding         : 65001
 
-Date: 2018-02-07 00:23:30
+Date: 2018-02-07 14:23:34
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -763,7 +763,7 @@ CREATE TABLE `zj_admin_user` (
 -- ----------------------------
 -- Records of zj_admin_user
 -- ----------------------------
-INSERT INTO `zj_admin_user` VALUES ('1', 'admin', '超级管理员', '$2y$10$Brw6wmuSLIIx3Yabid8/Wu5l8VQ9M/H/CG3C9RqN9dUCwZW3ljGOK', '', '0', '', '0', '0', '0.00', '0', '1', '0', '0', '1476065410', '1517922247', '1517922247', '2130706433', '100', '1', null, '', null, null);
+INSERT INTO `zj_admin_user` VALUES ('1', 'admin', '超级管理员', '$2y$10$Brw6wmuSLIIx3Yabid8/Wu5l8VQ9M/H/CG3C9RqN9dUCwZW3ljGOK', '', '0', '', '0', '0', '0.00', '0', '1', '0', '0', '1476065410', '1517964556', '1517964556', '2130706433', '100', '1', null, '', null, null);
 INSERT INTO `zj_admin_user` VALUES ('2', 'xiaowu', '吴伟祥', '$2y$10$Okn9s.p0D91489Uc6d7fKOwiBOF.WY.MLnLaLLAmwcg4M7wbVaSkm', '111@qq.com', '0', '18712377078', '0', '0', '0.00', '0', '2', '0', '0', '1517668089', '1517668341', '1517668340', '2130706433', '100', '1', '0', '', null, null);
 INSERT INTO `zj_admin_user` VALUES ('4', 'test123', 'wuweixiang', '$2y$10$d2Qx2IlvZWD6KOZ5E.TH7..QkB6u/3jJGsOwQDeKlGX947SjON6Ga', '', '0', '18712377777', '0', '0', '0.00', '0', '2', '0', '0', '1517668797', '1517668797', '0', '0', '100', '1', '0', '研发部', 'PHP程序员', '0551-7496237');
 INSERT INTO `zj_admin_user` VALUES ('5', 'dnasd', '阿萨达', '$2y$10$986OG1Z1J0DluQuTdRb5uu5n9Ml7g6/jEODeVfyjNN/hGqtLIC7W.', '', '0', '18712377771', '0', '0', '0.00', '0', '2', '0', '0', '1517668873', '1517669274', '0', '0', '100', '1', '1', 'asdad1', 'asdasd', 'asdsad');
@@ -1206,4 +1206,3 @@ CREATE TABLE `zj_cms_support` (
 -- ----------------------------
 -- Records of zj_cms_support
 -- ----------------------------
-SET FOREIGN_KEY_CHECKS=1;
