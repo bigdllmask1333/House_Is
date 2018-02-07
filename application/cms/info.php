@@ -59,10 +59,7 @@ return [
     // 模块参数配置
     'config' => [
         ['text', 'summary', '默认摘要字数', '发布文章时，如果没有填写摘要，则自动获取文档内容为摘要。如果此处不填写或填写0，则不提取摘要。', 0],
-        ['ckeditor', 'contact', '联系方式', '', '<div class="font-s13 push"><strong>XXX限公司</strong><br />
-地址：河源市江东新区东环路汇通苑D3-H232<br />
-电话：0762-8910006<br />
-邮箱：admin@zrthink.com</div>'],
+        ['ckeditor', 'contact', '联系方式', '', ''],
         ['textarea', 'meta_head', '顶部代码', '代码会放在 <code>&lt;/head&gt;</code> 标签以上'],
         ['textarea', 'meta_foot', '底部代码', '代码会放在 <code>&lt;/body&gt;</code> 标签以上'],
         ['radio', 'support_status', '在线客服', '', ['禁用', '启用'], 1],
@@ -588,14 +585,14 @@ return [
         ]
     ],
 
-    // 授权配置
-    'access' => [
-        'group' => [
-            "tab_title"   => '栏目授权',
-            "table_name"  => "cms_column",
-            "primary_key" => "id",
-            "parent_id"   => "pid",
-            "node_name"   => "name"
-        ],
-    ],
+//    // 授权配置
+//    'access' => [
+//        'group' => [
+//            "tab_title"   => '栏目授权',
+//            "table_name"  => "cms_column",
+//            "primary_key" => "id",
+//            "parent_id"   => "pid",
+//            "node_name"   => "name"
+//        ],
+//    ],
 ];

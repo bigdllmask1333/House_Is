@@ -52,13 +52,20 @@ class House extends Admin
             ->setSearch(['title' => '标题']) // 设置搜索框
             ->addColumns([ // 批量添加数据列
                 ['id', 'ID'],
-                ['name', '广告名称', 'text.edit'],
-                ['typeid', '分类', 'select', $list_type],
-                ['ad_type', '类型', 'text', '', ['代码', '文字', '图片', 'flash']],
-                ['timeset', '时间限制', 'text', '', ['永不过期', '限时']],
-                ['create_time', '创建时间', 'datetime'],
-                ['update_time', '更新时间', 'datetime'],
+                ['yezhu', '业主名', 'text.edit'],
+                ['name', '楼盘名称'],
+                ['xquxian', '区县'],
+                ['area', '地址'],
+                ['phone', '联系电话'],
+                ['yongtu', '用途'],
+                ['shi', '室'],
+                ['ting', '厅'],
+                ['wei', '卫'],
+                ['louc', '楼层'],
+                ['mianji', '面积'],
+                ['zujin', '租金'],
                 ['status', '状态', 'switch'],
+                ['detail', '详情'],
                 ['right_button', '操作', 'btn']
             ])
             ->addTopButtons('add,enable,disable,delete') // 批量添加顶部按钮
