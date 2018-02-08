@@ -1431,7 +1431,7 @@ if (!function_exists('generate_rand_str')) {
         // 判断文件是什么格式
         $type = pathinfo($file);
 
-
+//123
 
         $type = strtolower($type["extension"]);
         if ($type=='xlsx') {

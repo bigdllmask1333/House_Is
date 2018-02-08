@@ -32,7 +32,7 @@ class HouseType extends Admin
     public function index()
     {
 
-        // 保存数据
+        // 保存数据asd
         if ($this->request->isPost()) {
 
 //            $file = input('post.');
